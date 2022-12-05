@@ -1,0 +1,32 @@
+<h3 id="gg">
+    Welcome to the Group Gallery
+</h3>
+<h5>{{message}}</h5>
+<form method ='GET' action='/group'>
+<label for="groupName">Group Name:</label>
+<input type ="text" name="groupName" placeholder="Search a group...">
+<input type="submit" value="Search" ><br>
+</form>
+
+<form method ='POST' action='/group'>
+<input type ="text" name="newName" placeholder="Create Or Join...">
+<input type="submit" name = 'submit' value="Create">
+{{#if user.group}}
+<input type="submit" name = 'submit' value="Leave Group">
+{{/if}}
+<input type="submit" name = 'submit' value="Join">
+<input type="submit" name = 'submit' value="Back">
+</form>
+
+<p><table id="group" class="table table-striped">
+    <th class="th1">Group Name</th>
+    <th class="th1">Create Date</th>
+    {{#each groups as |g|}}
+    <tr>
+        <td class="t1">{{g.groupID}}</td>
+        <td class="t1">{{g.createdAt}}</td> 
+    </tr>
+    {{/each}}
+
+</table>
+</p>

@@ -1,0 +1,15 @@
+{{#if user}}
+<p>
+<h4>Hi {{user.username}}.</h4>
+</p>
+<li>
+<a href="/group" id = 'home'>Welcome to our Group Gallery</a></br>
+</li>
+
+<li><a href="/list/record" id = 'home'>Track your time</a></br></li>
+<li><a href="/list/report" id = 'home'>Check your report</a></br></li>
+<li><a href="/list/groupReport" id = 'home'>Check your group member list</a></li>
+
+{{else}}
+<a  href="/user/Login">Login</a> or <a href="/user/register">Register</a> to track your time.
+{{/if}}

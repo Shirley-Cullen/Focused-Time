@@ -1,0 +1,20 @@
+
+<h5 class="font-Lucida Grande">Please enter the time in hours</h5>
+<form method ='POST' action='/list/record'>
+<label for ="study">Study Time📔:</label>
+<input  id = "newStudyForm" class = "study" type ="text" name="study" placeholder="Enter your study time"><br>
+<label for ="sleep">Sleep Time💤:</label>
+<input  id = "newSleepForm" class = "sleep" type ="text" name="sleep" placeholder="Enter your sleep time"><br>
+<label for ="leisure">Extra Time😊:</label>
+<input  type ="text" name="leisure" placeholder="Enter your leisure time">
+
+
+<input class = "btn btn-hover-bg-shade-amount" type="submit" name = 'submit' value="Submit">
+{{#if message}}
+<span class="translate-middle badge rounded-pill bg-info badge-font-size:0.2">
+        😢</span>
+{{/if}}
+
+<h3 class = "wrongFormat">{{message}}</h3>
+</form>
+

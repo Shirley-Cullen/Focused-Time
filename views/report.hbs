@@ -1,0 +1,48 @@
+
+{{#if flag}}
+<p>
+    <h4>Today, you have studied for🤓: {{studyTime}}h</h4>
+    <h4>Today, you have slept for😴: {{sleepTime}}h</h4>
+    <h4>Today, you have extra time🥳: {{leisureTime}}h</h4>
+</p>
+
+<div class="badge bg-secondary text-wrap" style="width: 40rem; font-size: large">
+  
+  <p>This month, your TOT. Study Time: {{t1}}h</p>
+
+  <p>This month, your TOT. Time in Bed: {{t2}}h</p>
+
+  This month, your TOT. Extra Time: {{t3}}h...
+</div>
+
+<form method = "POST" action="/list/report">
+<select name="time">
+  <option value="dStudy">Daily Study</option>
+  <option value="dSleep">Daily Sleep</option>
+  <option value="dLeisure">Daily Extra</option>
+</select>
+<input name="data" type="text">
+<input type="submit" value="Update">
+</form>
+{{else}}
+<h5>{{message}}</h5>
+{{/if}}
+
+{{!-- <form method ='POST' action='/list/report'>
+<label for="groupName">Group Name:</label>
+<input type ="text" name="groupName">
+<input type="submit" value="Search"><br>
+</form>
+
+<form method ='POST' action='/group'>
+<input type ="text" name="newName" placeholder="Create Or Join">
+<input type="submit" name = 'submit' value="Create">
+{{#if user.group}}
+<input type="submit" name = 'submit' value="Leave Group">
+{{/if}}
+<input type="submit" name = 'submit' value="Join">
+<input type="submit" name = 'submit' value="Back">
+</form> --}}
+
+
+

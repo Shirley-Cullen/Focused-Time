@@ -1,0 +1,14 @@
+{{#if message}}
+<h5>{{message}}</h5>
+{{else}}
+<h5>{{name}} -- Member List</h5>
+
+<table id="group" class="table table-striped">
+  <th class="th1">Member</th>
+  {{#each data as |d|}}
+    <tr>
+        <td class="t2">{{d}}</td> 
+    </tr>
+    {{/each}}
+</table>
+{{/if}}
